@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+</head>
+<body>
+<!-- Создайте счетчик секунд, который начинает отчет с 1 и заканчивается на 30,
+также добавьте кнопки которые останавливают отчет, и запускают его заново и добавьте кнопку
+обнуляющую отcчет. Также попробуйте изменить код так чтобы отчет начинался с 30 и заканчивался на 1. -->
+
+    <div class="count"></div>
+    <input type="button" value="Запустить" onclick="startCount()">
+    <input type="button" value="Остановить" onclick="stopCount()">
+    <input type="button" value="Обнулить" onclick="startAgain()">
+
+
+    <script>
+        // var count = 0;
+        // var res = document.querySelector(".count");
+        // res.insertAdjacentText("afterbegin", count);
+        // var countRes;
+        // countRes = setInterval(countRise, 1000);
+        // function startCount() {
+        //     countRes = setInterval(countRise, 1000);
+        // }
+        // function countRise(){
+        //     if (count < 30) {
+        //     count++;
+        //     res.innerHTML = count;
+        //     } else stopCount();
+        // }
+        // function stopCount(){
+        //     clearInterval(countRes);
+        // }
+        // function startAgain() {
+        //     count = 0;
+        //     clearInterval(countRes);
+        //     res.innerHTML = count;
+        // }
+
+        var count = 30;
+        var res = document.querySelector(".count");
+        res.insertAdjacentText("afterbegin", count);
+        var countRes;
+        countRes = setInterval(countRise, 1000);
+        function startCount() {
+            countRes = setInterval(countRise, 1000);
+        }
+        function countRise(){
+            if (count > 0) {
+            count--;
+            res.innerHTML = count;
+            } else stopCount();
+        }
+        function stopCount(){
+            clearInterval(countRes);
+        }
+        function startAgain() {
+            count = 30;
+            clearInterval(countRes);
+            res.innerHTML = count;
+        }
+        
+
+
+
+    </script>
+</body>
+</html>
