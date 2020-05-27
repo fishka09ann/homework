@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">one</div>
+
+    <script>
+        var div = document.getElementById('one');
+        div.insertAdjacentHTML('afterend', '<div id="two" onclick="addDiv()">two</div>');
+
+        function addDiv(){
+        var divTwo = document.getElementById('two');
+        divTwo.insertAdjacentHTML('beforeBegin', '<div id="two_first">two</div>');
+        divTwo.setAttribute("id", "two_second");
+}
+    </script>
+</body>
+</html>
