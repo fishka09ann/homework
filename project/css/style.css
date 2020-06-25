@@ -1,0 +1,26 @@
+.wrap {
+    max-width: 1200px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.body {
+    padding-top: 50px;
+    background-image: url(/itea/project/img/cover.jpg);
+    background-size: cover;
+}
+.main {
+    
+    float: left;
+}
+.hero {
+    padding-bottom: 25px;
+}
+.infoStyle {
+    padding-top: 100px;
+    margin-left: 550px;
+}
+.info {
+    
+    display: none;
+}
